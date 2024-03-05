@@ -1,0 +1,39 @@
+/***** Tailwind *****/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.Border{
+  border: solid 1px red;
+}
+
+.underline-content{
+  padding: 0;
+  transition: 0.5s;
+}
+
+.underline-content::after{
+  content: '';
+  height: 3px;
+  left: 0%;
+  bottom: 0;
+  transition:all 0.5s;
+  position: absolute;
+  width: 0%;
+  background-color: rgb(202, 134, 51);
+}
+
+.underline-content:hover::after{
+  width: 100%;
+}
+
+.underline-content:hover{
+  padding-left: 10px;
+}
+
